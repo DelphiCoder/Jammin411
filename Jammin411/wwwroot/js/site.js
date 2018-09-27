@@ -1,4 +1,37 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿$(document).ready(function () {
+    AddHighlightToNav();
+});
 
-// Write your JavaScript code.
+function AddHighlightToNav() {
+    //remove the active state from all navigation links so we can highlight the right one
+    $(".nav-item").removeClass("active");
+    $(".nav-link").removeClass("text-primary").addClass("text-info");
+
+    var url = document.URL.toLowerCase();
+
+    if (url.indexOf("resume") > -1) {
+        $("#linkResume").removeClass("text-info").addClass("text-secondary");
+
+        return;
+    } //end if
+
+    if (url.indexOf("favorite") > -1) {
+        $("#linkFavorites").removeClass("text-info").addClass("text-secondary");
+
+        return;
+    } //end if
+
+    if (url.indexOf("contact") > -1) {
+        $("#linkContact").removeClass("text-info").addClass("text-secondary");
+
+        return;
+    } //end if
+
+    if (url.indexOf("example") > -1) {
+        $("#linkExamples").removeClass("text-info").addClass("text-secondary");
+
+        return;
+    } //end if
+
+    $("#linkHome").removeClass("text-info").addClass("text-secondary");
+} //end AddHighlightToNav

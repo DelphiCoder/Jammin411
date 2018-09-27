@@ -1,18 +1,27 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿
+@{
+    ViewData["Title"] = "My Favorites";
 }
 
-<h1 class="text-info">Welcome!</h1>
+<h1 class="text-info">Recent Favorites</h1>
 <hr />
-<p>
-    Let me tell you a little about this site.  This site uses a variety of technologies in a range of different applications.  The purpose is to illustrate the use of these technologies in the wild and serve as my own personal
-    living portfolio. Feel free to use anything you find on this site for your own purposes without credit (although it would be appreciated).
-</p>
-
-<p>
-    As I learn a new technology or find a new script or package that I enjoy I will post examples and my thoughts.  Not so much of a review since a technology that exists on this site already assumes
-    I like it and enjoy working with it.  The site is still in the early stages and will grow in the very near future so stay tuned.  
-</p>
+<div class="row">
+    <div class="col">
+        <div class="card">
+            <img class="card-img-top" src="~/images/boxshadows.PNG" alt="DataTables.net">
+            <div class="card-body">
+                <h5 class="card-title">Box Shadows</h5>
+                <p class="card-text">
+                    I found a Box Shadows CSS package that I really liked.  It is simple, easy to use and get up and running, and works on every 
+                    element I tried it on.  Has a range of options as well as hover effects.  Highly extensible and is well documented.  
+                </p>
+                <a href="~/Examples/BoxShadows" class="btn btn-primary" target="_blank">Box Shadows Example</a>
+            </div>
+        </div>
+    </div>
+    <div class="col"></div>
+    <div class="col"></div>
+</div><br /><br />
 
 <h1 class="text-info">All Time Favorites</h1>
 <hr />
@@ -58,3 +67,4 @@
         </div>
     </div>
 </div>
+
