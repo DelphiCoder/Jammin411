@@ -13,5 +13,10 @@ namespace Jammin411.Controllers
         {
             return View();
         } //end boxshadows
+
+        public IActionResult Tabulator()
+        {
+            return View();
+        } //end Tabulator
     } //end class
 } //end namespace

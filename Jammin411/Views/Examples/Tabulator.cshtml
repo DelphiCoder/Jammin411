@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "Tabulator";
+}
+
+@section css {
+    <link href="~/css/Tabulator/tabulator.min.css" rel="stylesheet">
+}
+
+<h1 class="text-info">Tabulator</h1>
+<hr />
+
+<div class="row">
+    <div class="col">
+        Tabulator allows you to create interactive tables in seconds from any HTML Table, Javascript Array, AJAX data source or JSON formatted data.
+        It comes with a complete set of CSS classes to make styling your tables a doddle. Simply include the library in your project and you're away!
+        You can find the pacakge at:
+        <a href="http://tabulator.info/" target="_blank" title="Box Shadows CSS">Tabulator</a><br /><br />
+
+        If you want to see how this table was setup please inspect the Tabulator.js file.  Of course this is an easy setup, but you can see how we 
+        can easily grab data from an AJAX call or remote data source as long as it is packaged according to our table. <br /><br />
+
+        There is one downside that I do not like about this package and that is that we are required to create an array of columns and set it up in our 
+        factory call to Tabulator.  This means we MUST know the format of our data before we can apply Tabulator to it.  I mention this because I have
+        had projects where I dynamically create a table and that means I am not aware of the columns prior to run-time.  DataTables.net is a good solution
+        there because it will simply apply to any properly formatted table, although it has fewer features than Tabulator.  This is a true trade-off that 
+        needs to be considered when looking for a package like this.
+    </div>
+</div><br />
+
+<div class="row">
+    <div class="col">
+        <div id="example-table"></div>
+    </div>
+</div>
+
+@section scripts {
+    <script type="text/javascript" src="~/js/Tabulator/tabulator.min.js"></script>
+    <script src="~/js/Examples/Tabulator.js" type="text/javascript"></script>
+}
+
